@@ -1,0 +1,19 @@
+{% extends 'kyenerContact/base.html' %}
+
+{% block content %}
+
+    <!-- main-container -->
+    
+        <div class="col-md-6">
+            <h2>Kayıt Ol</h2>
+            <form method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit">Kayıt Ol</button>
+            </form>
+        </div>
+
+
+{% endblock %}
+   
+    <!-- end main-container -->

@@ -1,0 +1,13 @@
+{% extends 'kyenerContact/base.html' %}
+
+{% block content %}
+<a href="{% url 'yeni_gonderi' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% for gonderi in Gonderis %}
+        <div>
+            <h2><a href="{% url 'gonderi_detay' pk=gonderi.pk %}">{{ gonderi.sehir }}</a></h2>
+            <p> {{ gonderi.yazi }} </p>
+            <p>{{ gonderi.yayim_zaman }}</p>
+        </div>
+        {% endfor %}
+
+{% endblock %}
